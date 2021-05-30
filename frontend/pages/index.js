@@ -61,10 +61,10 @@ export default function Home() {
                
                   <Heading my="3" color="gray.200" fontFamily="Poppins" size="2xl">Oladele <br /> Temidayo Michael</Heading>
                   <Text fontFamily="Poppins" color="" fontSize="2xl" > UI/UX Designer & FullStack Developer</Text>
-                  <Text color="gray.300">
-                    jhsucdbydcbdhybdhyc jhsucdbydcbdhybdhyc jhsucdbydcbdhybdhyc jhsucdbydcbdhybdhyc jhsucdbydcbdhybdhyc jhsucdbydcbdhybdhyc
-                    jhsucdbydcbdhybdhyc jhsucdbydcbdhybdhyc jh\hyc jhsucdbydcbdhybdhyc
-                    jhsucdbydcbdhybdhyc jhsucdbydcbdhybdhyc
+                  <Text color="gray.400">
+                    Experienced Developer with a demostrated history of working in the Information Technology and services industry. <br />
+                       Strong IT professional with Bsc Information Technology from Eastern Mediterrenean University, Turkey. <br />
+                    Quick learner, Great team player and a Leader.
                  </Text>
                   <Flex mt="10">
                     <Button mr="10" color="black" colorScheme="gray" >Hire Me</Button>
