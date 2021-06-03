@@ -26,7 +26,14 @@ a {
 }
 .menus{
   text-transform: uppercase;
-  font-family: Poppins;
   font-size: small;
 }
+.svgBg{
+background-image: url("../public/img/homebg.svg");
+ 
+}
 
+.active{
+  font-weight: bold;
+  display: none;
+}

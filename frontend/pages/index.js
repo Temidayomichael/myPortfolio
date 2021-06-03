@@ -11,63 +11,68 @@ import { emojify } from 'react-emojione';
 import Clients from '../components/clients';
 import What_i_offer from '../components/what_i_offer';
 import Experience from '../components/experience';
+import Portfolio from '../components/portfolio';
 //import ParticlesBg from 'particles-bg'
 
 export default function Home() {
-  const mainColor ="#00458B"
+  const mainColor = "#00458B"
+
   const router = useRouter()
   function isActive(route) {
+    console.log(router)
         if (route == router.pathname) {
             return "active"
         }
         
   }
-   const { colorMode, toggleColorMode } = useColorMode()
+
   return (
     <>
+      <Box className="svgBg" id="home" color='gray.300'>
       <Head>
         <title>Oladele Temidayo Michael | Portfolio</title>
         <link rel="icon" href="../img/dayo.jpeg" />
       </Head>
-      <Box pt="0" h="100vh" position="relative" >
-        <Stack w="1380px" m="auto" isInline justify="space-between"
-          pt={5}
+      <Box h="100vh" position="relative" >
+        <Stack w="1380px" m="auto"  isInline justify="space-between"
+          pt={6}
           
         >
-          <Center as={Text} fontSize="lg" fontFamily="Poppins" fontWeight="extrabold" >
+          <Center as={Text} fontSize="lg" fontWeight="extrabold" >
             OTM.
         </Center>
-          <Center className="menus">
-            <Box ml={5}> <Link href="#clients"><a className={isActive('/become_a_tutor')} >Clients</a></Link></Box>
+          <Center className="menus" as={Text} color='gray.400' >
+            <Box ml={5}> <Link href="#home"><a className={isActive('/home')} >Home</a></Link></Box>
+            <Box ml={5}> <Link href="#clients"><a className={isActive('/clients')} >Clients</a></Link></Box>
             <Box ml={5}>  <Link href="#services" ><a className={isActive('/faq')} >Services</a></Link>    </Box>
             <Box ml={5}>  <Link href="#portfolio"><a className={isActive('/request')} >Portfolio</a></Link></Box>
         
-            <Box ml={5}>  <Link href="#contact"><a className={isActive('/request')} >Contact</a></Link></Box>
-        
+            <Box ml={5}>  <Link href="#contact"><a className={isActive('/contact')} >Contact</a></Link></Box>
+            <Box ml={5}>  <Link href="#blog"><a className={isActive('/blog')} >Blog</a></Link></Box>
+          </Center>
          
-          </Center>
-          <Center>
-            <IconButton icon={<RiMoonFill />} onClick={toggleColorMode}  >Toggle color</IconButton>
-          </Center>
         </Stack>
-        <Box  >
+        <Box >
           <Box className="mycontainer"  >
             <Flex h="600px" >
           
-              <Center w="650px" color="gray.300" pl="5" className="" bg="black">
-                <Box>
-          
-                  <Text fontFamily="Poppins" fontSize="lg" >  👋 Hello World! I am</Text>
-               
-                  <Heading my="3" color="gray.200" fontFamily="Poppins" size="2xl">Oladele <br /> Temidayo Michael</Heading>
-                  <Text fontFamily="Poppins" color="" fontSize="2xl" > UI/UX Designer & FullStack Developer</Text>
-                  <Text color="gray.400">
+              <Center w="650px" pl="5" className="">
+                <Box >
+                    <Text size='lg'>👋 Hello, I am</Text>
+                     <Text color="" fontSize="2xl" > Oladele Temidayo Michael </Text>
+                    <Heading my="3" color="gray.200" size="2xl">
+                      
+                    <Text d="flex" >UI/UX <Text ml="2" color="gray.400"> Designer.</Text></Text>
+                   <Box d="flex" my="3" > <Text color="gray.400">FullStack </Text> <Text ml="2"> Developer.</Text></Box>
+                  </Heading>
+                 
+                  <Text mt="10" color="gray.400">
                     Experienced Developer with a demostrated history of working in the Information Technology and services industry. <br />
                        Strong IT professional with Bsc Information Technology from Eastern Mediterrenean University, Turkey. <br />
                     Quick learner, Great team player and a Leader.
                  </Text>
                   <Flex mt="10">
-                    <Button mr="10" color="black" colorScheme="gray" >Hire Me</Button>
+                    <Button mr="10" color="gray.800" colorScheme="gray" >Hire Me</Button>
                     <Text as={Link} decoration="underline"> Download my CV<Icon as={HiOutlineDownload} /> </Text>
                   </Flex>
                 </Box>
@@ -75,12 +80,11 @@ export default function Home() {
               <Image classNmae="img" src="../img/dayo.jpeg" />
             </Flex>
           </Box>
-          <Flex m="auto" mt="5" w="1380px">
+          <Flex m="auto"  mt="5" w="1380px">
             <IconButton
               variant="outline"
-              colorScheme="blackAlpha"
+              colorScheme="gray"
               size="sm"
-            
               aria-label="github"
               icon={<AiOutlineGithub />}
             />
@@ -124,21 +128,23 @@ export default function Home() {
           <Center as={Text} m="auto" fontSize="5xl" color={mainColor} fontFamily="poppins" fontWeight="semibold" > Happy Clients</Center>
         </Flex>
        */}
+        </Box>
+        </Box>
+      <Box id="portfolio" bg="">
+       <Portfolio />
       </Box>
-      <Box id="services" bg="" h="100vh">
-        <What_i_offer />
+      <Box id="" bg="gray.200" h="100vh">
+         <What_i_offer />
       </Box>
-      <Box id="clients" bg="gray.200" h="100vh">
+      <Box id="services" h="100vh">
         <Experience />
+       
       </Box>
-      <Box id="clients" h="100vh">
-        <Clients />
-      </Box>
-      <Box id="portfolio" bg="gray.200" h="100vh">
-
+      <Box id="review" bg="gray.200" h="100vh">
+ <Clients />
       </Box>
       
-      <Box id="contact" bg="black" h="100vh">
+      <Box id="contact" bg="gray.800" h="100vh">
 
       </Box>
     </>

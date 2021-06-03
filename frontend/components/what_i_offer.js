@@ -13,15 +13,15 @@ export default function What_i_offer() {
             <Box textAlign="center">
                 <Flex justifyContent="center" pt="10">
                     <Text fontStyle="italic" fontSize="md" >Services</Text>
-                    <Text fontWeight="extrabold" ml="1" color="black">......</Text>
+                    <Text fontWeight="extrabold" ml="1" color="gray.800">......</Text>
                 </Flex>
                 <Box >
                     <Heading as="h1" fontWeight="semibold" fontSize="4xl" >What I Offer</Heading>
                 </Box>
             </Box>
             <SimpleGrid my="5" justifyContent="center" columns={3} spacing={10}>
-                <Box px="3" bg="black" rounded="md" height="250px">
-                    <Box m="auto" bg="gray.200" w="70px" h="70px">
+                <Box px="3" bg="gray.800" rounded="md" height="250px">
+                    <Box m="auto" bg="gray.50" roundedBottom='md' w="70px" h="70px">
                         <Center  > <Icon as={SiAdobexd} mt="4" w={8} h={8} /></Center>
                     </Box>
                     <Box my="4" color="gray.50">
@@ -29,40 +29,40 @@ export default function What_i_offer() {
                     </Box>
                      
                 </Box>
-                <Box px="3" bg="gray.200" rounded="md" height="250px">
-                    <Box m="auto" color="gray.50" bg="black" w="70px" h="70px">
+                <Box px="3" bg="gray.50" rounded="md" height="250px">
+                    <Box m="auto" color="gray.50" roundedBottom='md' bg="gray.800" w="70px" h="70px">
                         <Center  > <Icon as={RiComputerLine} mt="4" w={8} h={8} /></Center>
                     </Box>
                     <Box my="4">
                         <Text fontSize="xl">Web Development</Text>
                     </Box>
                 </Box>
-                <Box px="3" bg="gray.200" rounded="md" height="250px">
-                    <Box m="auto" color="gray.50" bg="black" w="70px" h="70px">
+                <Box px="3" bg="gray.50" rounded="md" height="250px">
+                    <Box m="auto" color="gray.50" roundedBottom='md' bg="gray.800" w="70px" h="70px">
                         <Center  > <Icon as={HiOutlineDeviceMobile} mt="4" w={8} h={8} /></Center>
                     </Box>
                     <Box my="4">
                         <Text fontSize="xl" >Mobile App Development</Text>
                     </Box>
                 </Box>
-                <Box px="3" bg="gray.200" rounded="md" height="250px">
-                    <Box m="auto" color="gray.50" bg="black" w="70px" h="70px">
+                <Box px="3" bg="gray.50" rounded="md" height="250px">
+                    <Box m="auto" color="gray.50" roundedBottom='md' bg="gray.800" w="70px" h="70px">
                         <Center  > <Icon as={AiOutlineDatabase} mt="4" w={8} h={8} /></Center>
                     </Box>
                     <Box my="4">
                         <Text fontSize="xl">Database Management & Programming</Text>
                     </Box>
                 </Box>
-                <Box px="3" bg="gray.200" rounded="md" height="250px">
-                    <Box m="auto" color="gray.50" bg="black" w="70px" h="70px">
+                <Box px="3" bg="gray.50" rounded="md" height="250px">
+                    <Box m="auto" color="gray.50" roundedBottom='md' bg="gray.800" w="70px" h="70px">
                         <Center  > <Icon as={BiAnalyse} mt="4" w={8} h={8} /></Center>
                     </Box>
                     <Box my="4">
                         <Text fontSize="xl">System Analysis & Design</Text>
                     </Box>
                 </Box>
-                <Box px="3" bg="gray.200" rounded="md" height="250px">
-                    <Box m="auto" color="gray.50" bg="black" w="70px" h="70px">
+                <Box px="3" bg="gray.50" rounded="md" height="250px">
+                    <Box m="auto" color="gray.50" roundedBottom='md' bg="gray.800" w="70px" h="70px">
                         <Center  > <Icon as={GiTeacher} mt="4" w={8} h={8} /></Center>
                     </Box>
                     <Box my="4">
