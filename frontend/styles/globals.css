@@ -1,39 +1,36 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: Poppins, sans-serif !important;
-  background-color: #F6F4F2;
+	padding: 0;
+	margin: 0;
+	font-family: Poppins, sans-serif !important;
+	background-color: #f6f4f2;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .mycontainer {
 	max-width: 1280px;
-	margin: auto
+	margin: auto;
 }
 
 .content {
 	max-width: 1024px;
-	margin: auto
+	margin: auto;
 }
-.menus{
-  text-transform: uppercase;
-  font-size: small;
-}
-.svgBg{
-background-image: url("../public/img/homebg.svg");
- 
+.menus {
+	text-transform: uppercase;
+	font-size: small;
 }
 
-.active{
-  font-weight: bold;
-  display: none;
+.active {
+	font-weight: bold;
+	color: #D13F31 !important;
+	font-size: medium;
 }
