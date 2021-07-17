@@ -31,6 +31,24 @@ a {
 
 .active {
 	font-weight: bold;
-	color: #D13F31 !important;
+	color: #d13f31 !important;
 	font-size: medium;
+}
+.socialicons {
+	margin-left: 18px;
+}
+@media screen and (min-width: 52em) {
+	.socialicons {
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		transform: rotate(90deg);
+		margin-left: 65px;
+	}
+	.IconButton {
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-o-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+	}
 }

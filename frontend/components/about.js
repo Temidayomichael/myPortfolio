@@ -38,7 +38,7 @@ export default function About() {
 						fontFamily='times-roman'
 						fontWeight='bold'
 						letterSpacing='5'
-						fontSize='5xl'>
+						fontSize={['3xl', '5xl']}>
 						Personal Info
 					</Heading>
 					<Text color='gray.400' fontWeight='semibold'>

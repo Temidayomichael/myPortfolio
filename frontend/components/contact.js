@@ -25,7 +25,7 @@ export default function Contact() {
 						color='#D13F31'
 						fontWeight='extrabold'
 						textTransform='uppercase'
-						fontSize='xl'>
+						fontSize={['lg', 'xl']}>
 						Contact
 					</Text>
 				</Flex>
@@ -36,7 +36,7 @@ export default function Contact() {
 						fontFamily='times-roman'
 						fontWeight='bold'
 						letterSpacing='5'
-						fontSize='5xl'>
+						fontSize={['3xl', '5xl']}>
 						Get In Touch
 					</Heading>
 					<Text color='gray.400'>
@@ -45,8 +45,38 @@ export default function Contact() {
 					</Text>
 				</Box>
 			</Box>
-			<Container justifyContent='space-between' d='flex' maxW='5xl' mt='10'>
-				<Stack color='gray.50' w='70%' spacing={8}>
+			<Container
+				flexDirection='row-reverse'
+				justifyContent='space-between'
+				d={['box', 'flex']}
+				maxW='5xl'
+				mt='10'>
+				<Stack
+					color='gray.50'
+					spacing={8}
+					mt='10'
+					ml={['0', '20']}
+					w={['100%', '30%']}>
+					<Text fontWeight='semibold'>
+						Phone Number{' '}
+						<Text mt='3' color='gray.400'>
+							Mobile: +234 810 233 4561
+						</Text>
+					</Text>
+					<Text fontWeight='semibold'>
+						Email{' '}
+						<Text mt='3' color='gray.400'>
+							Dayoo.oladele@gmail.com
+						</Text>
+					</Text>
+					<Text fontWeight='semibold'>
+						Address{' '}
+						<Text mt='3' color='gray.400'>
+							Nigeria
+						</Text>
+					</Text>
+				</Stack>
+				<Stack py="10" color='gray.50' w={['100%', '70%']} spacing={8}>
 					<Input
 						_focus={{
 							borderColor: '#D13F31',
@@ -82,26 +112,6 @@ export default function Contact() {
 						colorScheme='blackAlpha'>
 						Submit
 					</Button>
-				</Stack>
-				<Stack color='gray.50' spacing={8} mt='10' ml='20' w='30%'>
-					<Text fontWeight='semibold'>
-						Phone Number{' '}
-						<Text mt='3' color='gray.400'>
-							Mobile: +234 810 233 4561
-						</Text>
-					</Text>
-					<Text fontWeight='semibold'>
-						Email{' '}
-						<Text mt='3' color='gray.400'>
-							Dayoo.oladele@gmail.com
-						</Text>
-					</Text>
-					<Text fontWeight='semibold'>
-						Address{' '}
-						<Text mt='3' color='gray.400'>
-							Nigeria
-						</Text>
-					</Text>
 				</Stack>
 			</Container>
 		</>
