@@ -13,19 +13,18 @@ import {
 	Icon,
 	Link,
 	Container,
+	Alert,
+	AlertIcon,
+	AlertTitle,
+	AlertDescription,
+	CloseButton,
 } from '@chakra-ui/react'
 import Head from 'next/head'
 import { HiOutlineDownload } from 'react-icons/hi'
-import { FiFacebook, FiTwitter } from 'react-icons/fi'
-import { FaLinkedinIn } from 'react-icons/fa'
-import { SiLinkedin } from 'react-icons/si'
-import { AiOutlineGithub, AiOutlineInstagram } from 'react-icons/ai'
 import Portfolio from '../components/portfolio'
 //import ParticlesBg from 'particles-bg'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
-import Scrollspy from 'react-scrollspy'
-import Sticky from 'react-sticky-el'
 import About from '../components/about'
 import Contact from '../components/contact'
 import Menu from '../components/inc/menu'
@@ -43,6 +42,14 @@ export default function Home() {
 	const MotionBox = motion(Box)
 	return (
 		<>
+			<Alert status='error'>
+				<AlertIcon />
+				<AlertTitle mr={2}>Under Construction!</AlertTitle>
+				<AlertDescription>
+					This Portfolio is actively been updated.
+				</AlertDescription>
+			</Alert>
+		
 			<Box className='svgBg' id='home' color='gray.200'>
 				<Head>
 					<title>Oladele Temidayo Michael | Portfolio</title>
@@ -52,7 +59,7 @@ export default function Home() {
 					<Menu />
 					<Box>
 						<Box>
-							<Flex h="80vh">
+							<Flex h='80vh'>
 								<Container d='flex' alignItems='center' maxWidth='5xl' h='100%'>
 									<Box>
 										<Text color='#D13F31'>👋 Hello, my name is</Text>
@@ -94,7 +101,7 @@ export default function Home() {
 							</Flex>
 						</Box>
 
-          <SocialIcons />
+						<SocialIcons />
 					</Box>
 
 					{/* <Flex left="0" right="0" pos="absolute" bg="#F6F4F2" top="90%" w="60%" mx="auto" borderRadius="5" h="200px" >

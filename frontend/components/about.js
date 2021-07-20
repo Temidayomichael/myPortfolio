@@ -20,8 +20,8 @@ import {
 
 export default function About() {
 	return (
-		<>
-			<Box pt='20' textAlign='center'>
+		<Box>
+			<Box py='20' textAlign='center'>
 				<Flex justifyContent='center' pt='10'>
 					<Text
 						color='#D13F31'
@@ -47,11 +47,11 @@ export default function About() {
 				</Box>
 			</Box>
 			<Container
-				mt='200px'
+				mt="20"
 				justifyContent='space-between'
 				maxW='5xl'
 				as={Center}>
-				<SimpleGrid columns={2} spacing={10}>
+				<SimpleGrid columns={[1,2]} spacing={10}>
 					<Box>
 						<Text fontWeight='semibold'>Hello!</Text>
 						<Text mt='10'>
@@ -69,9 +69,9 @@ export default function About() {
 							or just chat.
 						</Text>
 					</Box>
-					<Box ml='10'>
+					<Box ml={['0','10']}>
 						<Text fontWeight='semibold'>Skills</Text>
-						<Wrap mt='10'>
+						<Wrap my='10'>
 							<Tag size='lg' bg='gray.300'>
 								Next js
 							</Tag>
@@ -100,6 +100,6 @@ export default function About() {
 					</Box>
 				</SimpleGrid>
 			</Container>
-		</>
+		</Box>
 	)
 }
