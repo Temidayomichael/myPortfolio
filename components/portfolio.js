@@ -13,12 +13,13 @@ import {
 import { Tag, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import React from 'react'
 import { AiOutlineLink } from 'react-icons/ai'
+import FigmaEmbed from 'react-figma-embed'
 
 export default function Portfolio() {
 	function MyProject({ company_name, link, skills, role, image }) {
 		return (
 			<>
-				<Box  bg='#f2efbf' p={['5', '10']}>
+				<Box bg='#f2efbf' p={['5', '10']}>
 					<Stack spacing='6'>
 						<Img src={`../img/${image}`} alt='Project image' />
 
@@ -37,7 +38,7 @@ export default function Portfolio() {
 						</Tag>
 						<Wrap mt='10'>
 							{skills &&
-								skills.map((skill,key) => {
+								skills.map((skill, key) => {
 									return (
 										<Tag key={key} size='lg' bg='gray.300'>
 											{skill}
@@ -79,9 +80,10 @@ export default function Portfolio() {
 				</Box>
 			</Box>
 			<Box mt={['100px', 'lg']}>
-				<Tabs isLazy>
+				<Tabs>
 					<TabList>
 						<Tab>Latest</Tab>
+						<Tab>UI / UX</Tab>
 						<Tab>Others</Tab>
 					</TabList>
 					<TabPanels>
@@ -120,6 +122,11 @@ export default function Portfolio() {
 							</SimpleGrid>
 						</TabPanel>
 						{/* initially not mounted */}
+						<TabPanel>
+							<SimpleGrid columns={{ base: '1', lg: '2' }} spacing={10}>
+								<FigmaEmbed url='https://www.figma.com/file/eAbZ5cEyx9q0RV7iOLuo7K/Pykup-website?node-id=0%3A1' />
+							</SimpleGrid>
+						</TabPanel>
 						<TabPanel>
 							<SimpleGrid columns={{ base: '1', lg: '2' }} spacing={10}>
 								<MyProject
