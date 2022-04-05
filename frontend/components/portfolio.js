@@ -1,11 +1,58 @@
 import { Img } from '@chakra-ui/image'
-import { Box, Container, Flex, Grid, Heading, Text, Wrap } from '@chakra-ui/layout'
-import { Tag } from '@chakra-ui/tag'
+import {
+	Box,
+	Container,
+	Flex,
+	Stack,
+	Heading,
+	Text,
+	SimpleGrid,
+	Wrap,
+	Link,
+} from '@chakra-ui/layout'
+import { Tag, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import React from 'react'
+import { AiOutlineLink } from 'react-icons/ai'
 
 export default function Portfolio() {
+	function MyProject({ company_name, link, skills, role, image }) {
+		return (
+			<>
+				<Box  bg='#f2efbf' p={['5', '10']}>
+					<Stack spacing='6'>
+						<Img src={`../img/${image}`} alt='Project image' />
+
+						<Heading d='flex' alignItems='center' size='lg'>
+							<Link
+								mr='2'
+								target='_blank'
+								color={link ? 'blue' : 'gray'}
+								href={link}>
+								<AiOutlineLink />
+							</Link>{' '}
+							{company_name}
+						</Heading>
+						<Tag py='2' size='lg' bg='#DEDBA7'>
+							{role}
+						</Tag>
+						<Wrap mt='10'>
+							{skills &&
+								skills.map((skill,key) => {
+									return (
+										<Tag key={key} size='lg' bg='gray.300'>
+											{skill}
+										</Tag>
+									)
+								})}
+						</Wrap>
+					</Stack>
+				</Box>
+			</>
+		)
+	}
+
 	return (
-		<Container py="10" maxW='5xl'>
+		<Container py='10' maxW='5xl'>
 			<Box pt='20' textAlign='center'>
 				<Flex justifyContent='center' pt='10'>
 					<Text
@@ -31,77 +78,67 @@ export default function Portfolio() {
 					</Text>
 				</Box>
 			</Box>
-			<Box mt={['100px', '200px']}>
-				<Box my='10' bg='#f2efbf' p={['5', '20']}>
-					<Img src='../img/elab.png' />
-
-					<Flex p='5' w='100%'>
-						<Box>
-							<Heading size='lg'>Elab Network</Heading>
-							<Wrap mt='10'>
-								<Tag size='lg' bg='gray.300'>
-									Next js
-								</Tag>
-								<Tag size='lg' bg='gray.300'>
-									React js
-								</Tag>
-								<Tag size='lg' bg='gray.300'>
-									Node js
-								</Tag>
-								<Tag size='lg' bg='gray.300'>
-									Chakra UI
-								</Tag>
-								<Tag size='lg' bg='gray.300'>
-									Taiwind Css
-								</Tag>
-								<Tag size='lg' bg='gray.300'>
-									React Hooks
-								</Tag>
-								<Tag size='lg' bg='gray.300'>
-									Docker
-								</Tag>
-								<Tag size='lg' bg='gray.300'>
-									Git
-								</Tag>
-							</Wrap>
-						</Box>
-					</Flex>
-				</Box>
-				<Box bg='#f2efbf' p={['5', '20']}>
-					<Img src='../img/klasshour2.png' />
-
-					<Flex p='5' w='100%'>
-						<Box>
-							<Heading size='lg'>Klasshour</Heading>
-							<Wrap mt='10'>
-								<Tag size='lg' bg='gray.300'>
-									Next js
-								</Tag>
-								<Tag size='lg' bg='gray.300'>
-									React js
-								</Tag>
-								<Tag size='lg' bg='gray.300'>
-									Node js
-								</Tag>
-								<Tag size='lg' bg='gray.300'>
-									Chakra UI
-								</Tag>
-								<Tag size='lg' bg='gray.300'>
-									Taiwind Css
-								</Tag>
-								<Tag size='lg' bg='gray.300'>
-									React Hooks
-								</Tag>
-								<Tag size='lg' bg='gray.300'>
-									Docker
-								</Tag>
-								<Tag size='lg' bg='gray.300'>
-									Git
-								</Tag>
-							</Wrap>
-						</Box>
-					</Flex>
-				</Box>
+			<Box mt={['100px', 'lg']}>
+				<Tabs isLazy>
+					<TabList>
+						<Tab>Latest</Tab>
+						<Tab>Others</Tab>
+					</TabList>
+					<TabPanels>
+						{/* initially mounted */}
+						<TabPanel mt='10'>
+							<SimpleGrid columns={{ base: '1', lg: '2' }} spacing={10}>
+								<MyProject
+									company_name='Pykup Logistics'
+									link='https://pykup.app'
+									role='Founder, Team Lead'
+									skills={['Nextjs', 'AWS', 'Expressjs', 'Nodejs', 'MongoDb']}
+									image='pykup.png'
+								/>
+								<MyProject
+									role='Software Developer - Affiliate Website and Driver app backend'
+									skills={[
+										'Nextjs',
+										'React',
+										'AWS',
+										'Expressjs',
+										'Nodejs',
+										'MongoDb',
+									]}
+									image='foodgital_earn.png'
+									link='https://foodgital.com'
+									company_name='Foodgital'
+								/>
+								<MyProject
+									role='FullStack developer'
+									link='https://klasshour.com'
+									skills={['Nextjs', 'MongoDb']}
+									image='klasshour.png'
+									company_name='Klasshour'
+								/>
+								{/* <Project company_name='Elab Network' /> */}
+							</SimpleGrid>
+						</TabPanel>
+						{/* initially not mounted */}
+						<TabPanel>
+							<SimpleGrid columns={{ base: '1', lg: '2' }} spacing={10}>
+								<MyProject
+									company_name='Frontend Challenge'
+									link='https://temidayomichael.github.io/frontend_challenge'
+									skills={['Reactjs']}
+									role='React developer'
+									image='frontend_challenge.png'
+								/>
+								<MyProject
+									role='FullStack developer'
+									skills={['Nextjs', 'MongoDb']}
+									image='elab.png'
+									company_name='Elab Network'
+								/>
+							</SimpleGrid>
+						</TabPanel>
+					</TabPanels>
+				</Tabs>
 			</Box>
 		</Container>
 	)

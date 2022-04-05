@@ -73,6 +73,9 @@ export default function About() {
 						<Text fontWeight='semibold'>Skills</Text>
 						<Wrap my='10'>
 							<Tag size='lg' bg='gray.300'>
+								System Architecture Design
+							</Tag>
+							<Tag size='lg' bg='gray.300'>
 								Next js
 							</Tag>
 							<Tag size='lg' bg='gray.300'>
@@ -95,6 +98,12 @@ export default function About() {
 							</Tag>
 							<Tag size='lg' bg='gray.300'>
 								Git
+							</Tag>
+							<Tag size='lg' bg='gray.300'>
+								AWS
+							</Tag>
+							<Tag size='lg' bg='gray.300'>
+								Nodejs Express js
 							</Tag>
 						</Wrap>
 					</Box>
