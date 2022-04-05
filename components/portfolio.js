@@ -124,9 +124,18 @@ export default function Portfolio() {
 						{/* initially not mounted */}
 						<TabPanel mt='10'>
 							<Stack spacing={10}>
-								<FigmaEmbed url='https://www.figma.com/file/eAbZ5cEyx9q0RV7iOLuo7K/Pykup-website?node-id=0%3A1' />
-								<FigmaEmbed url='https://www.figma.com/file/uj2jKUisvE6lCV5DX6iQ2H/pykup-driver?node-id=0%3A1' />
-								<FigmaEmbed url='https://www.figma.com/file/eAbZ5cEyx9q0RV7iOLuo7K/Pykup-customer?node-id=0%3A1' />
+								<FigmaEmbed
+									width='100%'
+									url='https://www.figma.com/file/eAbZ5cEyx9q0RV7iOLuo7K/Pykup-website?node-id=0%3A1'
+								/>
+								<FigmaEmbed
+									width='100%'
+									url='https://www.figma.com/file/uj2jKUisvE6lCV5DX6iQ2H/pykup-driver?node-id=0%3A1'
+								/>
+								<FigmaEmbed
+									width='100%'
+									url='https://www.figma.com/file/eAbZ5cEyx9q0RV7iOLuo7K/Pykup-customer?node-id=0%3A1'
+								/>
 							</Stack>
 						</TabPanel>
 						<TabPanel mt='10'>
