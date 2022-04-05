@@ -134,7 +134,7 @@ export default function Portfolio() {
 								/>
 								<FigmaEmbed
 									width='100%'
-									url='https://www.figma.com/file/eAbZ5cEyx9q0RV7iOLuo7K/Pykup-customer?node-id=0%3A1'
+									url='https://www.figma.com/file/d0XlF7V03XLFT2kYdCOIVF/pykup-customer?node-id=0%3A1'
 								/>
 							</Stack>
 						</TabPanel>
