@@ -57,7 +57,7 @@ export default function About() {
 						<Text mt='10'>
 							My name is Oladele Temidayo Michael and I'm a passion driven
 							developer using my programming skills to build beautiful and
-							amazing solutions to solve problems for diffrents businesses in
+							amazing solutions to solve problems for different businesses in
 							different industries.
 						</Text>
 						<Text mt='3'>
